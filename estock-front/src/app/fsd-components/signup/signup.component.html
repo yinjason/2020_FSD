@@ -1,0 +1,32 @@
+<div class="container">
+    <form class="form-signin" [formGroup] = "signupForm" (ngSubmit)="submitSignup()">
+      <div class="row">
+        <h2 class="form-signin-heading col-md-12">Sign up a new user</h2>
+      </div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <label class="col-md-2" for="inputUsername">User Name</label>
+        <input formControlName="name" id="inputUsername" class="form-control col-md-4" placeholder="UserName" type="text" onclick="console.log('aaa');">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="inputPassword">Password</label>
+        <input formControlName="password" type="password" id="inputPassword" class="form-control col-md-4" placeholder="Password" >
+      </div>
+      <div class="row">
+        <label class="col-md-2">Signin Type</label>
+        <div class="col-md-1">
+        <input class="col-md-1" type="radio" id="user" name="role" />
+        <label class="col-md-1" for="user">User</label></div>
+        <div class="col-md-1">
+        <input class="col-md-1" type="radio" id="manager" name="role" />
+        <label class="col-md-1" for="manager">Manager</label>
+        </div>
+      </div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <button class="btn btn-lg btn-primary col-md-2" type="submit">Sign up</button>
+        <button class="btn btn-lg btn-primary col-md-2 marginLeft" [routerLink]="['/fsd-login']">Cancel</button>
+      </div>
+    </form>
+  </div>
+    

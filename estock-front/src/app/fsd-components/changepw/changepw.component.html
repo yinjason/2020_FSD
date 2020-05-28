@@ -1,0 +1,26 @@
+<div class="container">
+    <form class="form-signin" [formGroup] = "changepwForm" (ngSubmit)="submitChangepw()">
+      <div class="row">
+        <h2 class="form-signin-heading col-md-12">Change password</h2>
+      </div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <label class="col-md-2" for="inputUsername">User Name</label>
+        <input formControlName="name" id="inputUsername" class="form-control col-md-4" placeholder="UserName" type="text" onclick="console.log('aaa');">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="inputPassword">Old Password</label>
+        <input formControlName="oldPassword" type="password" id="inputPassword" class="form-control col-md-4" placeholder="Old Password" >
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="inputPassword">New Password</label>
+        <input formControlName="newPassword" type="password" id="inputPassword" class="form-control col-md-4" placeholder="New assword" >
+      </div>
+      <div>&nbsp;</div>
+      <div class="row">      
+        <button class="btn btn-lg btn-primary btn-block col-md-2" type="submit">Submit</button>
+        <button class="btn btn-lg btn-primary col-md-2 marginLeft" [routerLink]="['/fsd-login']">Cancel</button>
+      </div>
+    </form>
+  </div>
+    

@@ -1,0 +1,39 @@
+<div class="container">
+    <form class="form-signin" [formGroup] = "createCompanyForm" (ngSubmit)="create()">
+      <div class="row">
+        <h2 class="form-signin-heading col-md-12">New Company</h2>
+      </div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <label class="col-md-2" for="companyName">Company Name</label>
+        <input formControlName="companyName" id="companyName" class="form-control col-md-4" placeholder="CompanyName" type="text">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="CEOName">CEO Name</label>
+        <input formControlName="CEOName" id="CEOName" class="form-control col-md-4" placeholder="CEOName" type="text">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="turnOver">Turn Over</label>
+        <input formControlName="turnOver" id="turnOver" class="form-control col-md-4" placeholder="turnOver" type="text">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="stockMarket">stock Market</label>
+        <input formControlName="stockMarket" type="text" id="stockMarket" class="form-control col-md-4" placeholder="stockMarket" >
+      </div>      
+      <div class="row">
+        <label class="col-md-2" for="briefs">Brief Description</label>
+        <input formControlName="briefs" type="text" id="briefs" class="form-control col-md-4" placeholder="briefs" >
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="IOPDate">IPO Date</label>
+        <input formControlName="IOPDate" id="IOPDate" class="form-control col-md-4" placeholder="IOPDate" type="date">
+      </div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <button ng-router class="btn btn-primary  col-md-2 marginLeft10" type="submit">Create Company</button>
+        <button (click)="cancel()" class="btn btn-primary col-md-2 marginLeft10">Cancel</button>
+      </div>
+    
+    </form>
+    </div>

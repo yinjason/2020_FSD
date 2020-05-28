@@ -1,0 +1,28 @@
+<div class="container">
+<form class="form-signin" [formGroup] = "signinForm" (ngSubmit)="submitSignin()">
+  <div class="row">
+    <h2 class="form-signin-heading col-md-12">Please sign in</h2>
+  </div>
+  <div>&nbsp;</div>
+  <div class="row">
+    <label class="col-md-2" for="inputUsername">User Name</label>
+    <input formControlName="userName" id="inputUsername" class="form-control col-md-4" placeholder="UserName" type="text">
+  </div>
+  <div class="row">
+    <label class="col-md-2" for="inputPassword">Password</label>
+    <input formControlName="password" type="password" id="inputPassword" class="form-control col-md-4" placeholder="Password" >
+  </div>
+  <div>&nbsp;</div>
+  <div class="row">
+    <div class='col-md-8'>
+    <a href="" [routerLink]="['/signup']">Sign up</a>
+    <a href="" class='marginLeft10' [routerLink]="['/changepw']">Change password</a>
+  </div>
+  </div>
+  <div>&nbsp;</div>
+  <div class="row">
+    <button ng-router class="btn btn-lg btn-primary btn-block col-md-4 marginLeft10" type="submit">Log In</button>
+  </div>
+
+</form>
+</div>

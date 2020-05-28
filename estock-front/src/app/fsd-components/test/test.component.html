@@ -1,0 +1,13 @@
+
+  <form [formGroup]="validateForm">
+  
+
+        <input nz-input type="text" placeholder="请输入姓名~" formControlName="name">
+
+        年龄
+        <input nz-input type="text" placeholder="请输入年龄~" formControlName="age">
+        Email
+        <input nz-input type="text" placeholder="请输入Email~" formControlName="email">
+      展示表单的值
+      {{validateForm.value | json }}
+      <button nz-button (click)="handleInitForm()">重置</button>

@@ -1,0 +1,31 @@
+<div class="container">
+    <form class="form-signin" [formGroup] = "compareForm" (ngSubmit)="compare()">
+      <div class="row">
+        <h2 class="form-signin-heading col-md-12">Get company history</h2>
+      </div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <label class="col-md-2" for="companySector">Select Company/Sector</label>
+        <input formControlName="companySector" id="companySector" class="form-control col-md-4" placeholder="companySector" type="text">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="stockMarket">Stock Market</label>
+        <input formControlName="stockMarket" id="stockMarket" class="form-control col-md-4" placeholder="stockMarket" type="text">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="from">From</label>
+        <input formControlName="from" id="from" class="form-control col-md-4" placeholder="from" type="date">
+      </div>
+      <div class="row">
+        <label class="col-md-2" for="to">To</label>
+        <input formControlName="to" id="to" class="form-control col-md-4" placeholder="to" type="date">
+      </div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div class="row">
+        <button ng-router class="btn btn-primary  col-md-2 marginLeft10" type="submit">Compare</button>
+        <button (click)="cancel()" class="btn btn-primary col-md-2 marginLeft10">Cancel</button>
+      </div>
+    
+    </form>
+    </div>
