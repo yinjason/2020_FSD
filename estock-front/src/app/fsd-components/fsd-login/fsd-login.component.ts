@@ -20,6 +20,7 @@ export class FsdLoginComponent implements OnInit {
   // });
 
   constructor(public userService: UserService, private formBuilder : FormBuilder, public router : Router) { 
+    this.userService.loginStatus = false;
     this.signinForm = this.formBuilder.group({
       userName: '',
       password: ''

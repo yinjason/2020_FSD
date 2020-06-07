@@ -1,17 +1,13 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<form class="form-inline mt-2 mt-md-0">
-  <button class="btn btn-outline-primary" type="submit" [routerLink]="['/fsd-login']">Sign in</button>
-</form>
-Jason-----------------
-
-
+<div class="row">
+    <span class="col-md-4">
+      <button *ngIf="!userService.loginStatus" class="col-md-2 btn btn-outline-primary" type="submit" [routerLink]="['/fsd-login']">Sign in</button>
+      <button *ngIf="userService.loginStatus" class="btn btn-outline-primary" type="submit" [routerLink]="['/fsd-login']">Sign out</button>
+    </span>
+    <span class="col-md-2">&nbsp;
+    </span>
+    <span class="col-md-6">
+      <a *ngIf="userService.loginStatus" [routerLink]="[ '/company' ]" routerLinkActive="active">List Company</a>
+    </span>
+  </div>
 
 <router-outlet></router-outlet>
