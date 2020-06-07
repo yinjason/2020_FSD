@@ -1,13 +1,15 @@
-<div class="row">
-    <span class="col-md-4">
-      <button *ngIf="!userService.loginStatus" class="col-md-2 btn btn-outline-primary" type="submit" [routerLink]="['/fsd-login']">Sign in</button>
-      <button *ngIf="userService.loginStatus" class="btn btn-outline-primary" type="submit" [routerLink]="['/fsd-login']">Sign out</button>
-    </span>
-    <span class="col-md-2">&nbsp;
-    </span>
-    <span class="col-md-6">
-      <a *ngIf="userService.loginStatus" [routerLink]="[ '/company' ]" routerLinkActive="active">List Company</a>
-    </span>
-  </div>
 
+<div class="row headerbackgroud">
+  <div class="col-md-3">
+    <a class='marginLeft10' *ngIf="!userService.loginStatus" [routerLink]="[ '/login' ]" routerLinkActive="active">Sign In</a>
+    <a class='marginLeft10' *ngIf="userService.loginStatus" (click)="signout()" routerLinkActive="active">Sign Out</a>
+  </div>
+  <div class='col-md-3'></div>
+  <div class="col-md-6 alignRight" *ngIf="userService.loginStatus">
+    <a class='marginLeft10' *ngIf="userService.module=='admin'" [routerLink]="[ '/uploadFile' ]" routerLinkActive="active">Import Data</a>
+    <a class='marginLeft10' *ngIf="userService.module=='admin'" [routerLink]="[ '/company' ]" routerLinkActive="active">Manager Company</a>
+    <a class='marginLeft10' *ngIf="userService.module=='user'" [routerLink]="[ '/compare' ]" routerLinkActive="active">Show Stock</a>
+    <a class='marginLeft10' *ngIf="userService.module=='user'" [routerLink]="[ '/compare2' ]" routerLinkActive="active">Show Stock 2</a>
+  </div>
+</div>
 <router-outlet></router-outlet>

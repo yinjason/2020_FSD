@@ -26,10 +26,11 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('estock-front');
   });
 
-  it('should render title', () => {
+  it('should contains a link named "Sign in"', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('estock-front app is running!');
+    console.log("---------------------jjjason-------")
+    expect(compiled.querySelector('a').textContent=='Sign in');
   });
 });

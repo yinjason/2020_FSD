@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+.marginLeft10{
+    margin-left: 10px
+}
+.alignRight{
+    text-align-last: right;
+    align-items: right;
+    align-content: right;
+    align-self: right;
+}
+.headerbackgroud{
+    background-color: rgb(144, 228, 144);
+}
+.active{
+    background-color: blue;
+    color: lightyellow;
+}

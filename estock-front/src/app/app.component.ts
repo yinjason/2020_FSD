@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from './service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +8,15 @@ import { UserService } from './service/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loginStatus: boolean = false
-  isAdmin: boolean = false
-  constructor(public userService: UserService) {
-    this.loginStatus = this.userService.loginStatus
-    this.isAdmin = this.userService.module == 'admin'
+  constructor(public userService: UserService, public router: Router){
   }
   title = 'estock-front';
+  signout(){
+    this.userService.loginStatus = false
+    this.router.navigate(['/login'])
+  }
+
+
+
+
 }
