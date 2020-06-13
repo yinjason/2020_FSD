@@ -11,7 +11,9 @@ public class Company {
 	@Id
 	@GeneratedValue
 	private long id;
-	private String ceo;
+	private String companyName;
+	private String ceoName;
+	private String stockMarket;
 	private String turnOver;
 	private String description;
 	private Date ipoDate;
@@ -22,10 +24,10 @@ public class Company {
 		this.id = id;
 	}
 	public String getCeo() {
-		return ceo;
+		return ceoName;
 	}
 	public void setCeo(String ceo) {
-		this.ceo = ceo;
+		this.ceoName = ceo;
 	}
 	public String getTurnOver() {
 		return turnOver;
@@ -44,6 +46,18 @@ public class Company {
 	}
 	public void setIpoDate(Date ipoDate) {
 		this.ipoDate = ipoDate;
+	}
+	public String getCompanyName() {
+		return companyName;
+	}
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
+	}
+	public String getStockMarket() {
+		return stockMarket;
+	}
+	public void setStockMarket(String stockMarket) {
+		this.stockMarket = stockMarket;
 	}
 	
 }
