@@ -3,7 +3,12 @@
     <tr *ngFor="let item of companies let key=index">
         <td>{{item.companyName}}</td>
         <td>{{item.stockMarket}}</td>
-        <td>{{item.briefs}}</td>
+
+        <td>{{item.turnOver}}</td>
+
+        <td>{{item.description}}</td>
+        <td>{{item.ipoDate}}</td>
+        <td>{{item.ceo}}</td>
         <td><button (click)='edit(item.id)'>Edit</button>
             <button (click)="delete(item.id)">Delete</button></td>
     </tr>

@@ -20,6 +20,7 @@ import { CompareResultComponent } from './user/compare-result/compare-result.com
 import { Compare2ResultComponent } from './user/compare2-result/compare2-result.component';
 import { Compare2Component } from './user/compare2/compare2.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
    declarations: [
@@ -44,7 +45,8 @@ import { NgxEchartsModule } from 'ngx-echarts';
       AppRoutingModule,
       FormsModule,
       ReactiveFormsModule,
-      NgxEchartsModule
+      NgxEchartsModule,
+      HttpClientModule
    ],
    providers: [
       UserService

@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CompanyService } from 'src/app/service/company.service';
 interface Company{
   id: number;
   companyName: string;
   stockMarket: string;
-  briefs: string;
+  turnOver: string;
+  description: string;
+  ipoDate: Date;
+  ceo: String;
 }
 @Component({
   selector: 'app-company',
@@ -14,15 +18,20 @@ interface Company{
 
 export class CompanyComponent implements OnInit {
   companies: Company[]
-  constructor(private router: Router) {
-    this.companies=[
-      {id: 1, companyName: "comp1", stockMarket: 'NSE,BSE', briefs: 'brefs1'},
-      {id: 2, companyName: "comp2", stockMarket: 'NSE', briefs: 'brefs2'},
-      {id: 3, companyName: "comp3", stockMarket: 'SH,SZ', briefs: 'brefs3'},
-      {id: 4, companyName: "comp4", stockMarket: 'SZ,BSE', briefs: 'brefs4'},
-      {id: 5, companyName: "comp5", stockMarket: 'aaa,BSE', briefs: 'brefs5'},
-      {id: 6, companyName: "comp6", stockMarket: 'bbb', briefs: 'brefs6'}]
+  constructor(private router: Router, private companyService: CompanyService) {
+    this.companies=[]
+
+    console.error('------------starting')
+    this.companyService.listAllCompany().subscribe(data=>{
+      console.log('-------data:'+data)
+      this.companies = data as Company[]
+    },
+    error=>{
+      alert(error)
+      console.error('---error' + error)
+    })
    }
+
    url: string = ''
    edit(id: string){
      console.log('edit' +id)
@@ -34,6 +43,10 @@ export class CompanyComponent implements OnInit {
     this.router.navigate(['/createCompany'])
    }
   ngOnInit(): void {
+  }
+
+  getCompanies() {
+    return this.companyService.listAllCompany()
   }
 
 }
