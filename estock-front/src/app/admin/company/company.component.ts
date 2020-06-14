@@ -1,15 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CompanyService } from 'src/app/service/company.service';
-interface Company{
-  id: number;
-  companyName: string;
-  stockMarket: string;
-  turnOver: string;
-  description: string;
-  ipoDate: Date;
-  ceo: String;
-}
+import { Company } from 'src/app/model/company';
+
 @Component({
   selector: 'app-company',
   templateUrl: './company.component.html',
