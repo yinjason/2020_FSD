@@ -24,7 +24,7 @@ public class CompanyServiceController {
 		return this.companyService.findAll();
 	}
 	
-	@PostMapping("/insert")
+	@PostMapping("/create")
 	public void createCompany(@RequestBody Company company) {
 		this.companyService.createCompany(company);
 	}
