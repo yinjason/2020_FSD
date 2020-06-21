@@ -11,10 +11,10 @@ export class CompanyService {
   constructor(private httpClient: HttpClient) { }
 
   listAllCompany() {
-      return this.httpClient.get(`${environment.gatewayurl}/company/list`)
+      return this.httpClient.get(`${environment.gatewayurl}/company-service/company/list`)
   }
 
   createCompany(company: Company) {
-    return this.httpClient.post(`${environment.gatewayurl}/company/create`, company);
+    return this.httpClient.post(`${environment.gatewayurl}/company-service/company/create`, company);
   }
 }
