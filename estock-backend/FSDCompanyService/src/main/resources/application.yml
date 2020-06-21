@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: company-service
+server:
+  port: 9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:9001/eureka/   #设置与 Eureka Server 交互的地址查询服务和注册服务都需要依赖这个地址(服务暴露的地址)
+  instance:
+    prefer-ip-address: true #prefer ip to register

@@ -3,11 +3,13 @@ package companyservice.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import companyservice.entity.Company;
 import companyservice.service.CompanyService;
@@ -18,9 +20,18 @@ public class CompanyServiceController {
 	
 	@Autowired
 	private CompanyService companyService;
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	@Autowired
+	private DiscoveryClient discoveryClient;
 	
 	@RequestMapping("/list")
 	public List<Company> queryAllCompanies() {
+		System.out.println("--------in controller:" + discoveryClient);
+		System.out.println("--------in controller:" + restTemplate);
+		
 		return this.companyService.findAll();
 	}
 	
