@@ -30,3 +30,7 @@ Will call FSDStockService to inquiry Stock information
 6. estock-backend / FSDStockService
 
 Provide MicroService for Stock inquiry.
+
+Mile Stone 5
+1. Jenkins file, refer to file: 5_jenkins_config.xml
+2. 
