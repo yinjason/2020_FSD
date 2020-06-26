@@ -62,10 +62,10 @@
   	</dependencies>
   </dependencyManagement>
   <modules>
-  	<module>FSDUserService</module>
+  	<!-- <module>FSDUserService</module>
   	<module>FSDCompanyService</module>
+  	<module>FSDStockService</module> -->
   	<module>Eureka_service</module>
-  	<module>FSDStockService</module>
   	<module>FSDZuulGateway</module>
   </modules>
 </project>
