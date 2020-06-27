@@ -32,5 +32,10 @@ Will call FSDStockService to inquiry Stock information
 Provide MicroService for Stock inquiry.
 
 Mile Stone 5
-1. Jenkins file, refer to file: 5_jenkins_config.xml
-2. 
+1. Jenkins file, refer to file(same folder as README.md): 
+5_jenkins_config.xml
+5_jenkins_config_Eureka_service.xml
+2. docker file, refer to:
+https://github.com/yinjason/2020_FSD/blob/master/estock-backend/FsdSpringCloudMicroService/Eureka_service/dockerfile
+3. Jmeter filek refer to file(same folder as README.md):
+5_Jmeter.jmx
